@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274CC9631CAA528B001B5FA2 /* irr.c in Sources */ = {isa = PBXBuildFile; fileRef = 274CC9611CAA528B001B5FA2 /* irr.c */; };
 		27CD36E21CA5265C004EA40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CD36E11CA5265C004EA40F /* AppDelegate.swift */; };
 		27CD36E41CA5265C004EA40F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CD36E31CA5265C004EA40F /* ViewController.swift */; };
 		27CD36E71CA5265C004EA40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CD36E51CA5265C004EA40F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274CC9601CAA2A58001B5FA2 /* irr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "irr-Bridging-Header.h"; sourceTree = "<group>"; };
+		274CC9611CAA528B001B5FA2 /* irr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = irr.c; sourceTree = "<group>"; };
+		274CC9621CAA528B001B5FA2 /* irr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irr.h; sourceTree = "<group>"; };
 		27CD36DE1CA5265C004EA40F /* irr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = irr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CD36E11CA5265C004EA40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CD36E31CA5265C004EA40F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,12 +58,15 @@
 		27CD36E01CA5265C004EA40F /* irr */ = {
 			isa = PBXGroup;
 			children = (
+				274CC9601CAA2A58001B5FA2 /* irr-Bridging-Header.h */,
 				27CD36E11CA5265C004EA40F /* AppDelegate.swift */,
 				27CD36E31CA5265C004EA40F /* ViewController.swift */,
 				27CD36E51CA5265C004EA40F /* Main.storyboard */,
 				27CD36E81CA5265C004EA40F /* Assets.xcassets */,
 				27CD36EA1CA5265C004EA40F /* LaunchScreen.storyboard */,
 				27CD36ED1CA5265C004EA40F /* Info.plist */,
+				274CC9611CAA528B001B5FA2 /* irr.c */,
+				274CC9621CAA528B001B5FA2 /* irr.h */,
 			);
 			path = irr;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274CC9631CAA528B001B5FA2 /* irr.c in Sources */,
 				27CD36E41CA5265C004EA40F /* ViewController.swift in Sources */,
 				27CD36E21CA5265C004EA40F /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +257,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = irr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.irr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "irr/irr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = irr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.irr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "irr/irr-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +301,7 @@
 				27CD36F21CA5265C004EA40F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
