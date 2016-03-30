@@ -50,9 +50,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      * view
      */
     @IBAction func addBT(sender: UIButton) {
-        if (!editTV.text!.isEmpty){
+        if (!editTV.text!.isEmpty  ){
+            
             dataList.append(-Double.abs( NSNumberFormatter().numberFromString(editTV.text!)!.doubleValue ))
-        listView.reloadData()
+                listView.reloadData()
+           
         }
     }
 
